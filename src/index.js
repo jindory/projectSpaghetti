@@ -12,7 +12,7 @@ require('./style.css');
   }
 
   const keys = Array.from(getAll('.key'))
-  const soundsRoot = 'assets/sounds/'
+  const soundsRoot = '../assets/sounds/'
   const drumSounds = [
     { key: 81, sound: 'clap.wav' },
     { key: 87, sound: 'crash.wav' },
