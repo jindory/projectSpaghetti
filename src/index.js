@@ -1,3 +1,5 @@
+require('./style.css');
+
 ;(function () {
   'use strict'
 
