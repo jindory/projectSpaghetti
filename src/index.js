@@ -1,4 +1,14 @@
 require('./style.css');
+require("../assets/sounds/clap.wav");
+require("../assets/sounds/crash.wav");
+require("../assets/sounds/hihat.wav");
+require("../assets/sounds/kick.wav");
+require("../assets/sounds/openhat.wav");
+require("../assets/sounds/Perc.wav");
+require("../assets/sounds/ride.wav");
+require("../assets/sounds/shaker.wav");
+require("../assets/sounds/snare.wav");
+require("../assets/sounds/tom.wav");
 
 ;(function () {
   'use strict'

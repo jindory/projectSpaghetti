@@ -136,7 +136,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n;(function () {\n  'use strict'\n\n  const get = function (target) {\n    return document.querySelector(target)\n  }\n\n  const getAll = function (target) {\n    return document.querySelectorAll(target)\n  }\n\n  const keys = Array.from(getAll('.key'))\n  const soundsRoot = '../assets/sounds/'\n  const drumSounds = [\n    { key: 81, sound: 'clap.wav' },\n    { key: 87, sound: 'crash.wav' },\n    { key: 69, sound: 'hihat.wav' },\n    { key: 65, sound: 'kick.wav' },\n    { key: 83, sound: 'openhat.wav' },\n    { key: 68, sound: 'ride.wav' },\n    { key: 90, sound: 'shaker.wav' },\n    { key: 88, sound: 'snare.wav' },\n    { key: 67, sound: 'tom.wav' },\n  ]\n\n  const getAudioElement = (index) => {\n    const audio = document.createElement('audio')\n    audio.dataset.key = drumSounds[index].key\n    audio.src = soundsRoot + drumSounds[index].sound\n    return audio\n  }\n\n  const onTransitionEnd = (e) => {\n    if (e.propertyName === 'transform') {\n      e.target.classList.remove('playing')\n    }\n  }\n\n  const onMouseDown = (e) => {\n    const keycode = e.target.getAttribute('data-key')\n    playSound(keycode)\n  }\n\n  const onKeyDown = (e) => {\n    const keycode = e.keyCode\n    playSound(keycode)\n  }\n\n  const playSound = (keycode) => {\n    const $audio = get(`audio[data-key=\"${keycode}\"]`)\n    const $key = get(`div[data-key=\"${keycode}\"]`)\n    if ($key && $audio) {\n      $key.classList.add('playing')\n      $audio.currentTime = 0\n      $audio.play()\n    }\n  }\n\n  const init = () => {\n    window.addEventListener('keydown', onKeyDown)\n    keys.forEach((key, index) => {\n      const audio = getAudioElement(index)\n      key.appendChild(audio)\n      key.addEventListener('transitionend', onTransitionEnd)\n      key.addEventListener('mousedown', onMouseDown)\n      key.dataset.key = drumSounds[index].key\n    })\n  }\n\n  init()\n})()\n\n\n//# sourceURL=webpack://projectSpaghetti/./src/index.js?");
+eval("__webpack_require__(/*! ./style.css */ \"./src/style.css\");\n__webpack_require__(/*! ../assets/sounds/clap.wav */ \"./assets/sounds/clap.wav\");\n__webpack_require__(/*! ../assets/sounds/crash.wav */ \"./assets/sounds/crash.wav\");\n__webpack_require__(/*! ../assets/sounds/hihat.wav */ \"./assets/sounds/hihat.wav\");\n__webpack_require__(/*! ../assets/sounds/kick.wav */ \"./assets/sounds/kick.wav\");\n__webpack_require__(/*! ../assets/sounds/openhat.wav */ \"./assets/sounds/openhat.wav\");\n__webpack_require__(/*! ../assets/sounds/Perc.wav */ \"./assets/sounds/Perc.wav\");\n__webpack_require__(/*! ../assets/sounds/ride.wav */ \"./assets/sounds/ride.wav\");\n__webpack_require__(/*! ../assets/sounds/shaker.wav */ \"./assets/sounds/shaker.wav\");\n__webpack_require__(/*! ../assets/sounds/snare.wav */ \"./assets/sounds/snare.wav\");\n__webpack_require__(/*! ../assets/sounds/tom.wav */ \"./assets/sounds/tom.wav\");\n\n;(function () {\n  'use strict'\n\n  const get = function (target) {\n    return document.querySelector(target)\n  }\n\n  const getAll = function (target) {\n    return document.querySelectorAll(target)\n  }\n\n  const keys = Array.from(getAll('.key'))\n  const soundsRoot = '../assets/sounds/'\n  const drumSounds = [\n    { key: 81, sound: 'clap.wav' },\n    { key: 87, sound: 'crash.wav' },\n    { key: 69, sound: 'hihat.wav' },\n    { key: 65, sound: 'kick.wav' },\n    { key: 83, sound: 'openhat.wav' },\n    { key: 68, sound: 'ride.wav' },\n    { key: 90, sound: 'shaker.wav' },\n    { key: 88, sound: 'snare.wav' },\n    { key: 67, sound: 'tom.wav' },\n  ]\n\n  const getAudioElement = (index) => {\n    const audio = document.createElement('audio')\n    audio.dataset.key = drumSounds[index].key\n    audio.src = soundsRoot + drumSounds[index].sound\n    return audio\n  }\n\n  const onTransitionEnd = (e) => {\n    if (e.propertyName === 'transform') {\n      e.target.classList.remove('playing')\n    }\n  }\n\n  const onMouseDown = (e) => {\n    const keycode = e.target.getAttribute('data-key')\n    playSound(keycode)\n  }\n\n  const onKeyDown = (e) => {\n    const keycode = e.keyCode\n    playSound(keycode)\n  }\n\n  const playSound = (keycode) => {\n    const $audio = get(`audio[data-key=\"${keycode}\"]`)\n    const $key = get(`div[data-key=\"${keycode}\"]`)\n    if ($key && $audio) {\n      $key.classList.add('playing')\n      $audio.currentTime = 0\n      $audio.play()\n    }\n  }\n\n  const init = () => {\n    window.addEventListener('keydown', onKeyDown)\n    keys.forEach((key, index) => {\n      const audio = getAudioElement(index)\n      key.appendChild(audio)\n      key.addEventListener('transitionend', onTransitionEnd)\n      key.addEventListener('mousedown', onMouseDown)\n      key.dataset.key = drumSounds[index].key\n    })\n  }\n\n  init()\n})()\n\n\n//# sourceURL=webpack://projectSpaghetti/./src/index.js?");
 
 /***/ }),
 
@@ -148,6 +148,116 @@ eval("__webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n;(function
 
 "use strict";
 eval("module.exports = __webpack_require__.p + \"b43fd7715fceb660fde6.jpeg\";\n\n//# sourceURL=webpack://projectSpaghetti/./assets/images/background.jpeg?");
+
+/***/ }),
+
+/***/ "./assets/sounds/Perc.wav":
+/*!********************************!*\
+  !*** ./assets/sounds/Perc.wav ***!
+  \********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"sounds/Perc.wav\";\n\n//# sourceURL=webpack://projectSpaghetti/./assets/sounds/Perc.wav?");
+
+/***/ }),
+
+/***/ "./assets/sounds/clap.wav":
+/*!********************************!*\
+  !*** ./assets/sounds/clap.wav ***!
+  \********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"sounds/clap.wav\";\n\n//# sourceURL=webpack://projectSpaghetti/./assets/sounds/clap.wav?");
+
+/***/ }),
+
+/***/ "./assets/sounds/crash.wav":
+/*!*********************************!*\
+  !*** ./assets/sounds/crash.wav ***!
+  \*********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"sounds/crash.wav\";\n\n//# sourceURL=webpack://projectSpaghetti/./assets/sounds/crash.wav?");
+
+/***/ }),
+
+/***/ "./assets/sounds/hihat.wav":
+/*!*********************************!*\
+  !*** ./assets/sounds/hihat.wav ***!
+  \*********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"sounds/hihat.wav\";\n\n//# sourceURL=webpack://projectSpaghetti/./assets/sounds/hihat.wav?");
+
+/***/ }),
+
+/***/ "./assets/sounds/kick.wav":
+/*!********************************!*\
+  !*** ./assets/sounds/kick.wav ***!
+  \********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"sounds/kick.wav\";\n\n//# sourceURL=webpack://projectSpaghetti/./assets/sounds/kick.wav?");
+
+/***/ }),
+
+/***/ "./assets/sounds/openhat.wav":
+/*!***********************************!*\
+  !*** ./assets/sounds/openhat.wav ***!
+  \***********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"sounds/openhat.wav\";\n\n//# sourceURL=webpack://projectSpaghetti/./assets/sounds/openhat.wav?");
+
+/***/ }),
+
+/***/ "./assets/sounds/ride.wav":
+/*!********************************!*\
+  !*** ./assets/sounds/ride.wav ***!
+  \********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"sounds/ride.wav\";\n\n//# sourceURL=webpack://projectSpaghetti/./assets/sounds/ride.wav?");
+
+/***/ }),
+
+/***/ "./assets/sounds/shaker.wav":
+/*!**********************************!*\
+  !*** ./assets/sounds/shaker.wav ***!
+  \**********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"sounds/shaker.wav\";\n\n//# sourceURL=webpack://projectSpaghetti/./assets/sounds/shaker.wav?");
+
+/***/ }),
+
+/***/ "./assets/sounds/snare.wav":
+/*!*********************************!*\
+  !*** ./assets/sounds/snare.wav ***!
+  \*********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"sounds/snare.wav\";\n\n//# sourceURL=webpack://projectSpaghetti/./assets/sounds/snare.wav?");
+
+/***/ }),
+
+/***/ "./assets/sounds/tom.wav":
+/*!*******************************!*\
+  !*** ./assets/sounds/tom.wav ***!
+  \*******************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"sounds/tom.wav\";\n\n//# sourceURL=webpack://projectSpaghetti/./assets/sounds/tom.wav?");
 
 /***/ })
 

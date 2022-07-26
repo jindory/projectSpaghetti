@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index.js',
   mode: 'development',
   devServer: {
-    static: './dist',
+    static: './docs',
   },
   output: {
     path: path.resolve(__dirname, 'docs'), // './dist'의 절대 경로를 리턴합니다.
@@ -20,6 +20,13 @@ module.exports = {
         use: ["style-loader", "css-loader"],
         exclude: /node_modules/,
       },
+      {
+        test: /\.(wav|mp3)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "sounds/[name][ext]",
+        },
+      }
     ],
   },
   plugins: [new HtmlWebpackPlugin({
