@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   target: ['web', 'es5'],
   entry: './src/index.js',
-  mode: 'development',
   devServer: {
     static: './docs',
   },

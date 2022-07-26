@@ -22,7 +22,7 @@ require("../assets/sounds/tom.wav");
   }
 
   const keys = Array.from(getAll('.key'))
-  const soundsRoot = '../assets/sounds/'
+  const soundsRoot = './sounds/'
   const drumSounds = [
     { key: 81, sound: 'clap.wav' },
     { key: 87, sound: 'crash.wav' },
